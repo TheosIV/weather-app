@@ -1,0 +1,525 @@
+/* Normalize start */
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+hr {
+  height: 0;
+  color: inherit;
+}
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+}
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+legend {
+  padding: 0;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+summary {
+  display: list-item;
+}
+
+/* Normalize end */
+:root {
+  font-size: calc(0.625rem + 0.4vw);
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 5rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/background.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Main */
+.btn {
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+}
+
+@media only screen and (orientation: Portrait) {
+  main {
+    -ms-grid-rows: auto 1fr;
+        grid-template-rows: auto 1fr;
+    gap: 2rem;
+  }
+}
+
+main .change-unit {
+  position: fixed;
+  left: calc(100vw - 5rem);
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 460px) {
+  main .change-unit {
+    right: 10%;
+    left: auto;
+  }
+}
+
+main .change-unit .unit-name-div {
+  visibility: hidden;
+}
+
+main .change-unit .unit-div:hover ~ div {
+  visibility: initial;
+}
+
+main .change-unit .unit-symbol,
+main .change-unit .unit-name {
+  cursor: pointer;
+}
+
+main .change-unit .unit-symbol {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+main .forecast-weather {
+  width: 80%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+@media only screen and (orientation: Portrait) {
+  main .forecast-weather {
+    -ms-grid-rows: (1fr)[6];
+    -ms-grid-columns: 1fr;
+        grid-template: repeat(6, 1fr)/1fr;
+    gap: 2rem;
+  }
+}
+
+main .forecast-weather .forecast-day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .forecast-weather .forecast-day .day-name {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+main .forecast-weather .forecast-day .max-temp {
+  font-size: 1.6rem;
+}
+
+main .forecast-weather .forecast-day .forecast-day-img {
+  height: 3rem;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+main .forecast-weather .forecast-day .weather-forecast-description {
+  font-size: 1.5rem;
+  height: 3rem;
+  text-align: center;
+}
+
+main .current-weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .current-weather .error-block {
+  margin-top: 0.5rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  color: crimson;
+}
+
+main .current-weather .hidden {
+  visibility: hidden;
+}
+
+main .current-weather .unit {
+  font-size: 1.6rem;
+}
+
+main .current-weather .current-result__param-img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  height: 3rem;
+}
+
+main .current-weather .current-result {
+  width: clamp(45ch, 50%, 75ch);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+  gap: 1rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+main .current-weather .current-result .current-result__weather-img {
+  grid-column: 2 /-1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  position: relative;
+  z-index: -1;
+}
+
+main .current-weather .current-result .current-result__weather-img .weather-img {
+  height: 3.5rem;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+main .current-weather .current-result .current-result__city-name {
+  font-size: 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+main .current-weather .current-result .current-result__weather-description {
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 2rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .current-weather .current-result .current-result__temp {
+  font-size: 2rem;
+  font-weight: 600;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+main .current-weather .current-result .current-result__temp .unit {
+  font-size: inherit;
+}
+
+main .current-weather .current-result .current-result__feels-like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9rem;
+}
+
+main .current-weather .current-result .current-result__feels-like .feels-like-value {
+  font-size: 1.6rem;
+}
+
+main .current-weather .current-result .current-result__chance-of-rain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9rem;
+}
+
+main .current-weather .current-result .current-result__chance-of-rain .rain-chance-value {
+  font-size: 1.6rem;
+}
+
+main .current-weather .current-result .current-result__chance-of-rain .percentage {
+  font-size: 1.6rem;
+}
+
+main .current-weather .current-result .current-result__humidity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9rem;
+  width: 9.2rem;
+}
+
+main .current-weather .current-result .current-result__humidity .humidity-value {
+  font-size: 1.6rem;
+}
+
+main .current-weather .current-result .current-result__humidity .percentage {
+  font-size: 1.6rem;
+}
+
+main .current-weather .current-result .current-result__wind-speed {
+  width: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9rem;
+}
+
+main .current-weather .current-result .current-result__wind-speed span.wind-speed-value {
+  margin-right: 0.5rem;
+}
+
+main .current-weather .current-result .current-result__wind-speed .wind-speed-value {
+  font-size: 1.6rem;
+}
+
+main .current-weather .city-input {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .current-weather .city-input input {
+  background: transparent;
+  color: white;
+  border: 0;
+  border-bottom: 3px solid white;
+  font-size: 1.4rem;
+  padding: 4px;
+}
+
+main .current-weather .city-input input::-webkit-input-placeholder {
+  opacity: 1;
+  color: white;
+}
+
+main .current-weather .city-input input:-ms-input-placeholder {
+  opacity: 1;
+  color: white;
+}
+
+main .current-weather .city-input input::-ms-input-placeholder {
+  opacity: 1;
+  color: white;
+}
+
+main .current-weather .city-input input::placeholder {
+  opacity: 1;
+  color: white;
+}
+
+main .current-weather .city-input input:focus {
+  border: 0;
+  border-bottom: 3px solid white;
+  outline: none;
+}
+
+main .current-weather .city-input .search-btn {
+  position: absolute;
+}
+
+main .current-weather .city-input .search-btn .search-img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather 24/7</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="change-unit">
+            <div class="unit-div"><span class="unit-symbol">°C</span></div>
+            <div class="unit-name-div"><span class="unit-name">Imperial</span></div>
+
+        </div>
+        <div class="forecast-weather">
+            <div class="forecast-day">
+                <div class="day-name"></div>
+                <div class="temp-block">
+                    <div class="max-temp"><span class="max-temp-value unit-value"></span> <span
+                            class="unit unit-symbol">°C</span></div>
+                    <div class="min_temp"><span class="min-temp-value unit-value"></span> <span
+                            class="unit unit-symbol">°C</span></div>
+                </div>
+                <div class="weather-forecast-img"><img class="forecast-day-img" src="./img/clouds.svg"
+                        alt="forecast image"></div>
+                <div class="weather-forecast-description"></div>
+            </div>
+            <div class="forecast-day">
+                <div class="day-name"></div>
+                <div class="temp-block">
+                    <div class="max-temp"><span class="max-temp-value unit-value"></span> <span
+                            class="unit unit-symbol">°C</span></div>
+                    <div class="min_temp"><span class="min-temp-value unit-value"></span> <span
+                            class="unit unit-symbol ">°C</span></div>
+                </div>
+                <div class="weather-forecast-img"><img class="forecast-day-img" src="./img/clouds.svg"
+                        alt="forecast image"></div>
+                <div class="weather-forecast-description"></div>
+
+            </div>
+            <div class="forecast-day">
+                <div class="day-name"></div>
+                <div class="temp-block">
+                    <div class="max-temp"><span class="max-temp-value unit-value"></span> <span
+                            class="unit unit-symbol">°C</span></div>
+                    <div class="min_temp"><span class="min-temp-value unit-value"></span> <span
+                            class="unit unit-symbol">°C</span></div>
+                </div>
+                <div class="weather-forecast-img"><img class="forecast-day-img" src="./img/clouds.svg"
+                        alt="forecast image"></div>
+                <div class="weather-forecast-description"></div>
+
+            </div>
+            <div class="forecast-day">
+                <div class="day-name"></div>
+                <div class="temp-block">
+                    <div class="max-temp"><span class="max-temp-value unit-value"></span> <span
+                            class="unit unit-symbol">°C</span></div>
+                    <div class="min_temp"><span class="min-temp-value unit-value"></span> <span
+                            class="unit unit-symbol ">°C</span></div>
+                </div>
+                <div class="weather-forecast-img"><img class="forecast-day-img" src="./img/clouds.svg"
+                        alt="forecast image"></div>
+                <div class="weather-forecast-description"></div>
+
+            </div>
+            <div class="forecast-day">
+                <div class="day-name"></div>
+                <div class="temp-block">
+                    <div class="max-temp"><span class="max-temp-value unit-value"></span> <span
+                            class="unit unit-symbol">°C</span></div>
+                    <div class="min_temp"><span class="min-temp-value unit-value"></span> <span
+                            class="unit unit-symbol">°C</span></div>
+                </div>
+                <div class="weather-forecast-img"><img class="forecast-day-img" src="./img/clouds.svg"
+                        alt="forecast image"></div>
+                <div class="weather-forecast-description"></div>
+
+            </div>
+            <div class="forecast-day">
+                <div class="day-name"></div>
+                <div class="temp-block">
+                    <div class="max-temp"><span class="max-temp-value unit-value"></span> <span
+                            class="unit unit-symbol">°C</span></div>
+                    <div class="min_temp"><span class="min-temp-value unit-value"></span> <span
+                            class="unit unit-symbol">°C</span></div>
+                </div>
+                <div class="weather-forecast-img"><img class="forecast-day-img" src="./img/clouds.svg"
+                        alt="forecast image"></div>
+                <div class="weather-forecast-description"></div>
+
+            </div>
+        </div>
+        <div class="current-weather">
+            <div class="city-input">
+                <input placeholder="Search City" id="city-name" class="city-name" type="text">
+                <button class="btn search-btn"><img class="search-img" src="./img/search.svg"
+                        alt="search for a city"></button>
+
+            </div>
+            <div class="error-block hidden">
+                ⚠ Location not found.
+            </div>
+
+            <div class="current-result">
+                <div class="current-result__weather-img">
+                    <img class="weather-img" src="./img/rain.svg" alt="rain image">
+                </div>
+                <div class="current-result__city-name"></div>
+                <div class="current-result__weather-description"></div>
+                <div class="current-result__temp"><span class="temp-value unit-value"></span> <span
+                        class="unit unit-symbol">°C</span>
+                </div>
+                <div class="current-result__feels-like">
+                    <img class="current-result__param-img" src="./img/temp.svg" alt="Temperature image">
+                    <div>Feels Like <br> <span class="feels-like-value unit-value"></span> <span
+                            class="unit unit-symbol">°C</span>
+                    </div>
+                </div>
+                <div class="current-result__chance-of-rain"><img class="current-result__param-img" src="./img/rain.svg"
+                        alt="chance to rain image">
+                    <div>
+                        Chance of Rain <br> <span class="rain-chance-value"></span><span class="percentage">%</span>
+                    </div>
+                </div>
+
+                <div class="current-result__humidity">
+                    <img class="current-result__param-img" src="./img/humidity.svg" alt="humidity image">
+                    <div>
+                        Humidity <br> <span class="humidity-value"></span><span class="percentage">%</span>
+                    </div>
+                </div>
+                <div class="current-result__wind-speed">
+                    <img class="current-result__param-img" src="./img/wind.svg" alt="wind image">
+                    <div>
+                        Wind Speed <br> <span class="wind-speed-value"></span><span
+                            class="unit wind-speed-unit">km/h</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </main>
+
+</body>
+
+</html>
